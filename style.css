@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('./assets/bckgrnd22.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0.5rem 2rem;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Lora', serif;
+}
+
+.search-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.1rem 2rem;
+    height: 15vh;
+    margin-bottom: 1rem;
+}
+
+.search-div > input {
+    padding: 0.6rem;
+    width: 35rem;
+    line-height: 1.4;
+    border: 1px solid black;
+    border-radius: 7px;
+    outline: none;
+    font-weight: bold;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+    display: none; 
+}
+
+.search-button {
+    position: absolute;
+    right: 24rem;
+    top: 35px;
+    color: black;
+    cursor: pointer;
+}
+  
+.error-msg {
+    /* padding: 0.1rem; */
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    color: red;
+    font-size: 0.9rem;
+}
+.weather-response {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-info {
+    color: rgb(255, 255, 255);
+}
+
+.weather-info_description {
+    margin-bottom: 0.5rem;
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.weather-info_city {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.weather-info_date {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.weather-info_time {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.weather-info_units-c {
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    font-size: 3.5rem;
+    font-weight: 650;
+}
+
+.weather-info_icon {
+    width: 6rem;
+}
+
+.weather-info_icon > svg {
+    height: 70px;
+    width: 70px;
+}
+
+.forecast {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 20vw;
+}
+
+.daily-forecast {
+    display: flex;
+    justify-content: space-around;
+    height: 45px;
+    color: white;
+    width: 70%;
+}
+
+.daily-forecast_day {
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.daily-forecast_temperature {
+    display: flex;
+    width: 4rem;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.daily-forecast_temperature-high {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.daily-forecast_temperature-low {
+    font-size: 0.9rem;
+}
+
+.daily-forecast_icon > svg {
+    height: 35px;
+    width: 35px;
+}
+
+.daily-forecast_icon {
+    width: 3rem;
+    border-width: 5px;
+    font-weight: 600;
+}
+
+.weather-details-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+.weather-details {
+    color: white;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 5rem;
+}
+
+.weather-details_info {
+    font-size: 1.2rem;
+}
+
+.weather-details_data {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .search-div > input {
+        width: 300px;
+    }
+    .search-button {
+        right: 100px;
+        top: 2.5rem;
+    }
+    .weather-info_description {
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+    .weather-info_city {
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .weather-info_units-c {
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+    .forecast {
+        width: 40vw;
+    }
+    .daily-forecast {
+        height: 25px;
+    }
+    .daily-forecast_day {
+        font-size: 0.9rem;
+    }
+    .daily-forecast_temperature {
+        width: 3rem;
+        margin-right: 1rem;
+    }
+    .daily-forecast_temperature-high {
+        font-size: 0.7rem;
+    }
+    .daily-forecast_temperature-low {
+        font-size: 0.5rem;
+    }
+    .weather-details_info {
+        font-size: 0.9rem;
+    }
+    .weather-details_data {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .weather-details_icon > svg {
+        width: 30px;
+        height: 30px;
+    }     
+}
